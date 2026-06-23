@@ -1,4 +1,3 @@
-# projeto-faculdade-burger
 # 🍔 B7.Burger
 
 ## 📖 Sobre o Projeto
