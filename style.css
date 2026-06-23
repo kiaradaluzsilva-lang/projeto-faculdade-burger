@@ -1,0 +1,422 @@
+/* ===== RESET ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: #f8f8f8;
+    color: #222;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.logo {
+
+    font-family: 'Times New Roman', serif;
+
+    font-size: 32px;
+
+    font-weight: bold;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 5px;
+}
+
+.logo-yellow {
+    color: #222;
+    ;
+}
+
+.dot {
+    color: var(--orange);
+}
+
+/* ===== VARIÁVEIS ===== */
+
+:root {
+    --orange: #ff9900;
+    --light: #f8f8f8;
+    --gray: #8a8a8a;
+    --shadow: 0 15px 30px rgba(0, 0, 0, .08);
+}
+
+/* ===== CONTAINER ===== */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ===== HEADER ===== */
+
+header {
+    position: relative;
+}
+
+header .container {
+    height: 100px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header::after {
+    content: "";
+
+    position: absolute;
+    bottom: 0;
+
+    left: 12%;
+    right: 12%;
+
+    height: 1px;
+
+    background: #ececec;
+}
+
+.btn-login {
+    border: none;
+    background: var(--orange);
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-login:hover {
+    background: #e78b00;
+}
+
+/* ===== HERO ===== */
+
+.hero {
+    padding: 20px 0;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content span {
+    color: #999;
+}
+
+.hero-content h2 {
+    font-size: 65px;
+    line-height: 1.1;
+    margin: 20px 0;
+}
+
+.hero-content p {
+    color: var(--gray);
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.btn-order {
+    border: none;
+    background: var(--orange);
+    color: white;
+    padding: 16px 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn-order:hover {
+    background: #e78b00;
+}
+
+/* ===== HAMBURGUER PRINCIPAL ===== */
+
+.hero-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-image img {
+    width: 500px;
+    position: relative;
+    z-index: 1;
+    top: 48px;
+
+}
+
+.hero-image::after {
+    content: "";
+    position: absolute;
+
+    width: 280px;
+    height: 40px;
+
+    bottom: 40px;
+
+    background: rgba(0, 0, 0, .18);
+    border-radius: 50%;
+
+    filter: blur(20px);
+
+    z-index: 0;
+}
+
+/* LOCAL PARA IMAGEM DE FUNDO */
+
+.hero-image::before {
+    content: "";
+    width: 550px;
+    height: 550px;
+
+    position: absolute;
+
+    /* coloque sua imagem aqui */
+    /*
+    background:url("../img/bg-burger.png");
+    */
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    z-index: -1;
+}
+
+
+/* ===== CARDS DA DIREITA ===== */
+
+.hero-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+
+    border: 2px solid var(--orange);
+    border-radius: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.info-text h3 {
+    margin-bottom: 8px;
+}
+
+.info-text span {
+    display: block;
+    height: 4px;
+    border-radius: 4px;
+}
+
+.info-text span:first-of-type {
+    width: 45px;
+    margin-top: 8px;
+    background: #f3c067b0;
+}
+
+.info-text span:last-of-type {
+    width: 70px;
+    margin-top: 6px;
+    background: #f3c067;
+}
+
+/* ===== BUSCA ===== */
+
+.search {
+    background: #f1f1f1;
+    padding: 70px 0;
+    z-index: 1;
+    padding-top: 120px;
+    margin-top: -32px;
+}
+
+.search h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.search-container select {
+
+    width: 100%;
+    border: none;
+    outline: none;
+
+    padding: 22px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow: var(--shadow);
+
+    font-size: 16px;
+}
+
+.search-input {
+    position: relative;
+    width: 100%;
+}
+
+.search-input i {
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #f3c067;
+    font-size: 18px;
+    z-index: 1;
+}
+
+.search-input input {
+    width: 100%;
+    border: none;
+    outline: none;
+
+    padding: 22px 22px 22px 60px;
+
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow: var(--shadow);
+
+    font-size: 16px;
+}
+
+/* ===== PRODUTOS ===== */
+
+.products {
+    padding: 100px 0;
+}
+
+.products-grid {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 40px;
+}
+
+/* ===== CARD ===== */
+
+.product-card {
+    overflow: hidden;
+    border-radius: 20px;
+    background: white;
+    box-shadow: var(--shadow);
+    transition: .3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+}
+
+.product-image {
+    background: #fff9f2;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 180px;
+    /* altura fixa da parte colorida */
+    overflow: visible;
+}
+
+.product-image img {
+    width: 250px;
+
+    position: relative;
+
+    top: 32px;
+    /* ajuste vertical da imagem */
+}
+
+.promotion {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+
+    background: var(--orange);
+    color: white;
+
+    padding: 8px 14px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+}
+
+.product-content {
+    padding: 35px 25px 25px;
+}
+
+.product-content span {
+    display: block;
+    color: #1d1c1c;
+    top: 20px;
+}
+
+.product-content h3 {
+    margin: 8px 0;
+    font-size: 38px;
+}
+
+.product-content h4 {
+    color: var(--orange);
+    font-size: 30px;
+}
