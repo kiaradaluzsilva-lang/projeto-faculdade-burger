@@ -40,24 +40,13 @@ Durante o desenvolvimento deste projeto foram praticados conceitos como:
 
 ---
 
-## 📷 Preview
-
-Adicione aqui uma captura de tela do projeto.
-
-```md
-![Preview do Projeto](./assets/images/preview.png)
-```
-
----
-
 ## 📁 Estrutura do Projeto
 
 ```text
 B7.Burger/
 │
 ├── index.html
-├── css/
-│   └── style.css
+├── style.css
 ├── assets/
 │   ├── images/
 │   └── icons/
